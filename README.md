@@ -1,4 +1,5 @@
-```markdown
+<img width="1224" height="950" alt="diagram-export-9-4-2025-11_38_12-AM" src="https://github.com/user-attachments/assets/7044497c-9bd0-4119-8b13-b0679d2a25cd" />
+
 # 3-Tier Voting App on AKS with Azure DevOps, Docker & Argo CD
 
 ## Overview
@@ -18,7 +19,6 @@ The three app services are:
 
 ## Architecture (high-level)
 
-```
 
 Developer Commit ─┐
 ├─> Azure DevOps Pipelines ──> Docker build & push ──> ACR
@@ -30,7 +30,7 @@ Argo CD (AKS)
 Deployments & Services
 (vote • worker • result)
 
-```
+
 
 ---
 
@@ -110,5 +110,4 @@ An install script:
 - **ImagePullBackOff**: confirm the exact image **name:tag** in the manifest exists in ACR; verify AKS has **pull permissions**.
 - **Argo CD not syncing**: ensure your Argo CD Application points to the correct **repo/branch/path**; check `Sync` policy (auto vs. manual).
 - **Access to Argo CD UI**: verify how `argocd-server` is exposed (NodePort, LoadBalancer, or port-forward) and that you’re using the right URL/port.
-```
 
