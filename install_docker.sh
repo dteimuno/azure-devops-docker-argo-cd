@@ -13,3 +13,13 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo chmod +x docker.sh
+./docker.sh
+#Change directory to root
+cd ../../..
+#To enable running docker without sudo permissions:
+sudo chmod 666 /var/run/docker.sock
+#change directory back to directory for starting up CI process:
+cd /home/azureuser/myagent
+#Then start the CI server:
+./run.sh
